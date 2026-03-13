@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Mar 12 23:10:17 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : top_level
+Top-level Entity Name : lif_neuron_core
+Family : MAX 10
+Total logic elements : 292
+    Total combinational functions : 292
+    Dedicated logic registers : 67
+Total registers : 67
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
