@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at spike_encoder.sv(22): always construct contains both blocking and non-blocking assignments File: C:/Users/ericw/Documents/eric/snnproject/SNN-on-FPGA-for-ECG/spike_encoder.sv Line: 22

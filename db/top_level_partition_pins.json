@@ -2,32 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "fire_out",
-					"strict" : false
-				},
-				{
-					"name" : "ms_tick",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "reset_n",
-					"strict" : false
-				},
-				{
-					"name" : "inhibit_in",
-					"strict" : false
-				},
-				{
-					"name" : "spike_in",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }
