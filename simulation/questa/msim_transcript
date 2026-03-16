@@ -1,0 +1,129 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 win64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do top_level_run_msim_gate_systemverilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work gate_work 
+# Copying c:/intelfpga_lite/24.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+. {top_level.svo}
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 19:48:13 on Mar 15,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+." top_level.svo 
+# -- Compiling module arrhythmias_detection_toplevel
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	arrhythmias_detection_toplevel
+# End time: 19:48:13 on Mar 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.arrhythmias_detection_toplevel
+# vsim -gui -l msim_transcript work.arrhythmias_detection_toplevel 
+# Start time: 19:48:40 on Mar 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: top_level.svo(130): Module 'fiftyfivenm_lcell_comb' is not defined.
+#  For instance '\~QUARTUS_CREATED_GND~I ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(147): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[0]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(160): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[1]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(173): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[2]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(186): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[3]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(199): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[4]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(212): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[5]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(225): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[6]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(238): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[7]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(251): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[8]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(264): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[9]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(277): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[10]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(290): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\ARDUINO_IO[11]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(303): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[0]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(316): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[1]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(329): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[2]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(342): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[3]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(355): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[4]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(368): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[5]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(381): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[6]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(394): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[7]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(407): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[8]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(420): Module 'fiftyfivenm_io_obuf' is not defined.
+#  For instance '\LEDR[9]~output ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(433): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\MAX10_CLK1_50~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(445): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\KEY[0]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(457): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\KEY[1]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(469): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[0]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(481): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[1]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(493): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[2]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(505): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[3]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(517): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[4]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(529): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[5]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(541): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[6]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(553): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[7]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(565): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[8]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(577): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[9]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(589): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[10]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(601): Module 'fiftyfivenm_io_ibuf' is not defined.
+#  For instance '\ARDUINO_IO[11]~input ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(613): Module 'fiftyfivenm_unvm' is not defined.
+#  For instance '\~QUARTUS_CREATED_UNVM~ ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(650): Module 'fiftyfivenm_adcblock' is not defined.
+#  For instance '\~QUARTUS_CREATED_ADC1~ ' at path 'arrhythmias_detection_toplevel'
+# ** Error: top_level.svo(673): Module 'fiftyfivenm_adcblock' is not defined.
+#  For instance '\~QUARTUS_CREATED_ADC2~ ' at path 'arrhythmias_detection_toplevel'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=41, Warnings=0.
+# Error loading design
+# End time: 19:48:42 on Mar 15,2026, Elapsed time: 0:00:02
+# Errors: 41, Warnings: 0
