@@ -1,0 +1,18 @@
+module tb_snn;
+    logic clk;
+    logic spike_in;
+    logic [0:0] test_vector [0:2999]; // Array to hold the .mem data
+    int i;
+
+    initial begin
+        // Load the encoded spikes into memory
+        $readmemb("ecg_spikes.mem", test_vector);
+        
+        // Feed the SNN one spike per clock cycle
+        for (i = 0; i < 3000; i++) begin
+            @(posedge clk);
+            spike_in = test_vector[i];
+        end
+        $finish;
+    end
+endmodule

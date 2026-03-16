@@ -2,32 +2,16 @@
 MAX10_CLK1_50 => clk.IN16
 KEY[0] => rst.IN16
 KEY[1] => ~NO_FANOUT~
-ARDUINO_IO[0] <> <UNC>
-ARDUINO_IO[1] <> <UNC>
-ARDUINO_IO[2] <> <UNC>
-ARDUINO_IO[3] <> <UNC>
-ARDUINO_IO[4] <> <UNC>
-ARDUINO_IO[5] <> <UNC>
-ARDUINO_IO[6] <> <UNC>
-ARDUINO_IO[7] <> <UNC>
-ARDUINO_IO[8] <> <UNC>
-ARDUINO_IO[9] <> <UNC>
-ARDUINO_IO[10] <> <UNC>
-ARDUINO_IO[11] <> <UNC>
-ARDUINO_IO[12] <> <UNC>
-ARDUINO_IO[13] <> <UNC>
-ARDUINO_IO[14] <> <UNC>
-ARDUINO_IO[15] <> <UNC>
-LEDR[0] << <GND>
-LEDR[1] << <GND>
-LEDR[2] << <GND>
-LEDR[3] << <GND>
-LEDR[4] << <GND>
-LEDR[5] << <GND>
-LEDR[6] << <GND>
-LEDR[7] << <GND>
-LEDR[8] << <GND>
-LEDR[9] << <GND>
+LEDR[0] <= lif_neuron_core:outputlayer[0].l1n1.fire_out
+LEDR[1] <= lif_neuron_core:outputlayer[1].l1n1.fire_out
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
 
 
 |arrhythmias_detection_toplevel|spike_encoder:encoder_instance1

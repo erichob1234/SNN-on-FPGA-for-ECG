@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sun Mar 15 00:25:42 2026
+Analysis & Synthesis Status : Successful - Sun Mar 15 18:25:42 2026
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : top_level
 Top-level Entity Name : arrhythmias_detection_toplevel
@@ -7,7 +7,7 @@ Total logic elements : 0
     Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 29
+Total pins : 25
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

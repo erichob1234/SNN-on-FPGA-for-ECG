@@ -1,6 +1,6 @@
 module arrhythmias_detection_toplevel(input logic MAX10_CLK1_50,
 													input logic [1:0] KEY,
-													inout wire [15:0] ARDUINO_IO, 
+													inout wire [11:0] ARDUINO_IO, 
 													output logic [9:0] LEDR);
 													
 
@@ -17,6 +17,8 @@ logic inhibit3;
 logic data_valid;
 assign rst = KEY[0];
 assign clk = MAX10_CLK1_50;
+assign LEDR[1:0] = outputbus;
+assign data_in = ARDUINO_IO;
 							
 //input bus from spike encoder
 spike_encoder #( .DATA_WIDTH(12), 

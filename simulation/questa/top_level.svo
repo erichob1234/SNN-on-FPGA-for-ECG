@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition"
 
-// DATE "03/15/2026 00:25:58"
+// DATE "03/15/2026 18:25:57"
 
 // 
 // Device: Altera 10M50DAF484C6GES Package FBGA484
@@ -30,14 +30,14 @@
 `timescale 1 ps/ 1 ps
 
 module arrhythmias_detection_toplevel (
+	ARDUINO_IO,
 	MAX10_CLK1_50,
 	KEY,
-	ARDUINO_IO,
 	LEDR);
-input 	MAX10_CLK1_50;
-input 	[1:0] KEY;
-output 	[15:0] ARDUINO_IO;
-output 	[9:0] LEDR;
+inout 	reg [11:0] ARDUINO_IO ;
+input 	logic MAX10_CLK1_50 ;
+input 	logic [1:0] KEY ;
+output 	logic [9:0] LEDR ;
 
 // Design Ports Information
 // MAX10_CLK1_50	=>  Location: PIN_P11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -65,10 +65,6 @@ output 	[9:0] LEDR;
 // ARDUINO_IO[9]	=>  Location: PIN_AA17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 // ARDUINO_IO[10]	=>  Location: PIN_AB19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 // ARDUINO_IO[11]	=>  Location: PIN_AA19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
-// ARDUINO_IO[12]	=>  Location: PIN_Y19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
-// ARDUINO_IO[13]	=>  Location: PIN_AB20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
-// ARDUINO_IO[14]	=>  Location: PIN_AB21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
-// ARDUINO_IO[15]	=>  Location: PIN_AA20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 
 
 wire gnd;
@@ -97,10 +93,6 @@ wire \ARDUINO_IO[8]~input_o ;
 wire \ARDUINO_IO[9]~input_o ;
 wire \ARDUINO_IO[10]~input_o ;
 wire \ARDUINO_IO[11]~input_o ;
-wire \ARDUINO_IO[12]~input_o ;
-wire \ARDUINO_IO[13]~input_o ;
-wire \ARDUINO_IO[14]~input_o ;
-wire \ARDUINO_IO[15]~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 wire \~QUARTUS_CREATED_UNVM~~busy ;
 wire \~QUARTUS_CREATED_ADC1~~eoc ;
@@ -117,10 +109,6 @@ wire \ARDUINO_IO[8]~output_o ;
 wire \ARDUINO_IO[9]~output_o ;
 wire \ARDUINO_IO[10]~output_o ;
 wire \ARDUINO_IO[11]~output_o ;
-wire \ARDUINO_IO[12]~output_o ;
-wire \ARDUINO_IO[13]~output_o ;
-wire \ARDUINO_IO[14]~output_o ;
-wire \ARDUINO_IO[15]~output_o ;
 wire \LEDR[0]~output_o ;
 wire \LEDR[1]~output_o ;
 wire \LEDR[2]~output_o ;
@@ -309,58 +297,6 @@ fiftyfivenm_io_obuf \ARDUINO_IO[11]~output (
 // synopsys translate_off
 defparam \ARDUINO_IO[11]~output .bus_hold = "false";
 defparam \ARDUINO_IO[11]~output .open_drain_output = "true";
-// synopsys translate_on
-
-// Location: IOOBUF_X62_Y0_N16
-fiftyfivenm_io_obuf \ARDUINO_IO[12]~output (
-	.i(vcc),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\ARDUINO_IO[12]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \ARDUINO_IO[12]~output .bus_hold = "false";
-defparam \ARDUINO_IO[12]~output .open_drain_output = "true";
-// synopsys translate_on
-
-// Location: IOOBUF_X56_Y0_N2
-fiftyfivenm_io_obuf \ARDUINO_IO[13]~output (
-	.i(vcc),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\ARDUINO_IO[13]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \ARDUINO_IO[13]~output .bus_hold = "false";
-defparam \ARDUINO_IO[13]~output .open_drain_output = "true";
-// synopsys translate_on
-
-// Location: IOOBUF_X62_Y0_N30
-fiftyfivenm_io_obuf \ARDUINO_IO[14]~output (
-	.i(vcc),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\ARDUINO_IO[14]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \ARDUINO_IO[14]~output .bus_hold = "false";
-defparam \ARDUINO_IO[14]~output .open_drain_output = "true";
-// synopsys translate_on
-
-// Location: IOOBUF_X62_Y0_N23
-fiftyfivenm_io_obuf \ARDUINO_IO[15]~output (
-	.i(vcc),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\ARDUINO_IO[15]~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \ARDUINO_IO[15]~output .bus_hold = "false";
-defparam \ARDUINO_IO[15]~output .open_drain_output = "true";
 // synopsys translate_on
 
 // Location: IOOBUF_X46_Y54_N2
@@ -673,54 +609,6 @@ defparam \ARDUINO_IO[11]~input .listen_to_nsleep_signal = "false";
 defparam \ARDUINO_IO[11]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X62_Y0_N15
-fiftyfivenm_io_ibuf \ARDUINO_IO[12]~input (
-	.i(ARDUINO_IO[12]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\ARDUINO_IO[12]~input_o ));
-// synopsys translate_off
-defparam \ARDUINO_IO[12]~input .bus_hold = "false";
-defparam \ARDUINO_IO[12]~input .listen_to_nsleep_signal = "false";
-defparam \ARDUINO_IO[12]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X56_Y0_N1
-fiftyfivenm_io_ibuf \ARDUINO_IO[13]~input (
-	.i(ARDUINO_IO[13]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\ARDUINO_IO[13]~input_o ));
-// synopsys translate_off
-defparam \ARDUINO_IO[13]~input .bus_hold = "false";
-defparam \ARDUINO_IO[13]~input .listen_to_nsleep_signal = "false";
-defparam \ARDUINO_IO[13]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X62_Y0_N29
-fiftyfivenm_io_ibuf \ARDUINO_IO[14]~input (
-	.i(ARDUINO_IO[14]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\ARDUINO_IO[14]~input_o ));
-// synopsys translate_off
-defparam \ARDUINO_IO[14]~input .bus_hold = "false";
-defparam \ARDUINO_IO[14]~input .listen_to_nsleep_signal = "false";
-defparam \ARDUINO_IO[14]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X62_Y0_N22
-fiftyfivenm_io_ibuf \ARDUINO_IO[15]~input (
-	.i(ARDUINO_IO[15]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\ARDUINO_IO[15]~input_o ));
-// synopsys translate_off
-defparam \ARDUINO_IO[15]~input .bus_hold = "false";
-defparam \ARDUINO_IO[15]~input .listen_to_nsleep_signal = "false";
-defparam \ARDUINO_IO[15]~input .simulate_z_as = "z";
-// synopsys translate_on
-
 // Location: UNVM_X0_Y40_N40
 fiftyfivenm_unvm \~QUARTUS_CREATED_UNVM~ (
 	.arclk(vcc),
@@ -847,14 +735,6 @@ assign ARDUINO_IO[9] = \ARDUINO_IO[9]~output_o ;
 assign ARDUINO_IO[10] = \ARDUINO_IO[10]~output_o ;
 
 assign ARDUINO_IO[11] = \ARDUINO_IO[11]~output_o ;
-
-assign ARDUINO_IO[12] = \ARDUINO_IO[12]~output_o ;
-
-assign ARDUINO_IO[13] = \ARDUINO_IO[13]~output_o ;
-
-assign ARDUINO_IO[14] = \ARDUINO_IO[14]~output_o ;
-
-assign ARDUINO_IO[15] = \ARDUINO_IO[15]~output_o ;
 
 endmodule
 
