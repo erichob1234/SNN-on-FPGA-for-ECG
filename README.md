@@ -54,7 +54,7 @@ This is the RTL schematic of the spike encoder module:
   <img src="Assets/Screenshot%202026-03-15%20195338.png" width="800">
 </p>
 
-This is the RTL schematic of the individual neurons: 
+Zooming in on an individual neuron: 
 
 <p align="center">
   <img src="Assets/Screenshot%202026-03-15%20195847.png" width="1000">
