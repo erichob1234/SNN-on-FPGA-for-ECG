@@ -44,21 +44,23 @@ I used the MIT-BIH Arrhythmia Database for simulation and testing, which contain
 </p>
 
 ## RTL Block Schematics
-This is the top-level view of the synthesized hardware:
+**This is the top-level view of the synthesized hardware:**
 <p align="center">
   <img src="Assets/Screenshot%202026-03-15%20195303.png" width="700">
 </p>
 
-This is the RTL schematic of the spike encoder module:
+**This is the RTL schematic of the spike encoder module:**
 <p align="center">
   <img src="Assets/Screenshot%202026-03-15%20195338.png" width="800">
 </p>
 
-Zooming in on an individual neuron: 
+**Zooming in on an individual neuron:**
 
+Hidden layer neuron:
 <p align="center">
   <img src="Assets/Screenshot%202026-03-15%20195847.png" width="1000">
 </p>
+Output neuron:
 <p align="center">
   <img src="Assets/Screenshot%202026-03-15%20195811.png" width="1200">
 </p>
